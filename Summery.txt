@@ -1,0 +1,140 @@
+starthere 	: function  program	function
+
+program	: INT MAIN PB PE BB  statement BE
+
+statement	: /* empty */
+			| statement declaration
+			| statement print
+			| statement expression 
+			| statement ifelse
+			| statement assign
+			| statement forloop
+			| statement switch
+			| statement extend  
+			| statement sob
+
+
+statement1	: /* empty */
+			| statement1 temp
+
+
+lost	: /* empty */
+	| lost lol
+
+...........................................................
+
+declaration : type variables SM 
+
+type		: INT | DOUBLE | CHAR
+
+variables	: variable CM variables 
+		| variable
+
+variable   	: ID 
+		| ID ASGN expression
+
+..................................................................
+
+sob: 	 MAXI PB expression PE SM
+	| MINI PB expression PE SM
+	| PB expression  PE SM
+	| FACT expression SM
+	| Cir_area expression SM
+	| sin1 expression SM
+	| cos1 expression SM
+	| STAR expression SM
+	| CUM expression SM
+	| Prime expression SM
+	| Bin expression SM
+	| REV PB STR PE SM
+	| SORT PB STR PE SM
+
+
+assign : ID ASGN expression SM
+
+................................................................
+
+
+print	:   PRINTVAR PB ID PE SM
+	    | PRINTSTR PB STR PE SM
+	    | PRINTLN PB PE	SM
+
+lol: 	PRINTVAR PB ID PE SM
+	| PRINTSTR PB STR PE SM
+	| PRINTLN PB PE SM 
+
+
+temp:   	PRINTVAR PB ID PE SM
+		| PRINTSTR PB STR PE SM 
+		| PRINTLN PB PE SM 
+..........................................................................
+
+
+expression : NUM
+	| ID 
+	| expression PLUS expression
+	| expression MINUS expression 
+	| expression MULT expression
+	| expression CMP expression
+	| expression CUM
+	| expression CMP1 expression 
+	| expression gcd1 expression
+	| expression lcm1 expression
+	| expression pow1 expression 
+	| expression DIV expression
+	| expression LT expression
+	| expression GT expression
+	|expression LE expression
+	|expression GE expression
+	|PB expression PE
+
+
+
+..................................................
+
+ifelse 	: IF PB ifexp PE BB lost BE elseif
+ifexp	: expression 
+elseif 	: /* empty */
+		| elseif ELSEIF PB expression PE BB lost BE
+		| elseif ELSE BB lost BE
+....................................................................................
+
+forloop	: FOR PB expression TO expression INC expression 
+extend 	: PE BB statement1 BE	
+..............................................................
+
+switch	: SWITCH PB expswitch PE BB switchinside BE
+expswitch 	:  expression
+switchinside	: /* empty */
+			| switchinside expression COL BB statement BE
+			| switchinside DEFAULT COL BB statement BE 
+
+
+.........................................................................
+
+function 	: /* empty */
+		| function func
+
+func 	: type FUNCTION PB fparameter PE BB statement BE
+
+fparameter 	: /* empty */
+			| type ID fsparameter
+
+fsparameter : /* empty */
+			| fsparameter CM type ID
+
+
+..........................................................................................
+
+
+// [-+]?{digit}+"."[0-9]+ 		{yylval.val = atof(yytext); return DBL;}
+
+
+
+
+
+
+
+
+
+

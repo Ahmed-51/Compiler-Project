@@ -1,0 +1,107 @@
+*stdio.h*
+#A Comment is Added#
+
+
+Int Main ( )
+{
+
+	( 60 Lcm 25 ) ;
+	( 5 Power 3 ) ;
+
+	Max ( 67 Cmp 5 ) ;
+	Min ( 6 Cmp1 5 ) ;
+
+	Fact ( 7 ) ;
+
+	CumAdd ( 7 ) ;
+
+
+	Rev ( "Palindrome" ) ;
+	PrintLine ( ) ;
+
+
+	Sort ( "zyxcba" ) ;
+	PrintLine ( ) ;
+	
+
+	Prime ( 20 ) ;
+	PrintLine ( ) ;
+	
+	
+	Sin ( 30 ) ;
+	Cos ( 30 ) ;
+	
+
+
+	Int Var_a Shoman 6 Jog 5;  
+	PrintStr ( "Add: " ) ;
+	PrintVar ( Var_a ) ;
+	PrintLine ( ) ;
+
+
+	Int Var_b Shoman 6 Biyog 5;
+	PrintStr ( "Minus: " ) ;
+	PrintVar ( Var_b ) ;
+	PrintLine ( ) ;
+	
+
+
+	Int Var_c Shoman 6 Gun 5;
+	PrintStr ( "Mul: " ) ;
+	PrintVar ( Var_c ) ;
+	PrintLine ( ) ;
+	
+
+	Int Var_d Shoman 6 Vag 2;
+	PrintStr ( "Div: " ) ;
+	PrintVar ( Var_d ) ;
+	PrintLine ( ) ;
+	
+
+
+	Int Var_x Shoman Var_a;
+	Int Var_y Shoman 10, Var_z Shoman Var_b;
+
+	
+	Int Var_p Shoman 1 ;
+	Int Var_q Op_Equ 5;
+	For ( Var_p To Var_q Barao 1 ) 
+	{
+	}
+	PrintLine ( ) ;
+
+
+	Jodi ( 5 Lt 4 ) 
+	{
+	    PrintStr ( "If block Executed" ) ;
+	}
+	AbarJodi ( 4 Lt 5 ) 
+	{
+	    PrintStr ( "Else if block executed" ) ;
+	}
+    Noile
+	{
+	    PrintStr ( "Else block executed" ) ;
+	}
+	PrintLine ( ) ;
+	
+	
+	
+
+	Switch ( 2 ) 
+	{
+		1:
+			{
+
+			}
+		7:
+			{
+
+			}
+
+		Def:  {
+
+			}
+	}
+
+}
